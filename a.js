@@ -1,4 +1,4 @@
-import { Container, Row, Col, Form } from "react-bootstrap";
+ximport { Container, Row, Col, Form } from "react-bootstrap";
 import './index.css'
 
 function Register(){
@@ -124,3 +124,9 @@ function Register(){
     )
 }
 export default Register;
+
+
+
+
+
+

@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
+import Footer from './Footer';
 
 function Sidebar() {
     return (
@@ -18,21 +19,26 @@ function Sidebar() {
                     <h3 className="fw-bold text-center text-light"> <i className='bx bxs-dashboard'></i> APRODITE</h3>
                     <ul className="nav flex-column mt-5">
                         <li>
-                            <NavLink exact activeClassName="" className="nav-link text-white fs-4 " to="/schadule">
-                                 <i className='me-3 bx bxs-calendar'></i> 
-                                 Schadule
+                            <NavLink activeClassName="" className="nav-link text-white fs-4 " to="/overview">
+                                <i class=' me-3 bx bxs-pie-chart-alt-2'></i>
+                                 Overview
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink activeClassName="" className="nav-link text-white fs-4" to="/trainer"> 
-                                <i className='me-3 bx bxs-user'></i>
-                                Trainer
+                            <NavLink exact activeClassName="" className="nav-link text-white fs-4 " to="/ideas">
+                                <i class="me-3 bi bi-lightbulb-fill"></i> 
+                                 Ideas
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName="" className="nav-link text-white fs-4" to="/agents"> 
+                                <i class='me-3 bx bxs-user'></i>
+                                Agents
                              </NavLink>
                         </li>
                     </ul>
                 </div>
         </nav>
-        
        </>
 
     );

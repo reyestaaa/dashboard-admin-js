@@ -1,68 +1,51 @@
 import { Button, InputGroupm, Container, Form, Col, Row, Card } from "react-bootstrap";
 
-
 function Login(){
     return(
-        <div className="vh-100 colog">
-        <Container>
-            <Row className="row-contact">
-                <Col md={6}>
-                    <Card className="shadow p-4" style={{marginTop: "120px"}}>
-                        <Form>
-                            <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Email address</Form.Label>
-                                <Form.Control type="email" placeholder="Enter email" />
-                                <Form.Text className="text-muted">
-                                We'll never share your email with anyone else.
-                                </Form.Text>
-                            </Form.Group>
+        <section className="vh-100 log">
+            <Container className="py-5 h-100">
+                <Row className=" d-flex justify-content-center align-items-center h-100">
+                    <Col md={6} lg={6} xl={5}>
+                        <Card className="shadow p-4 card-login" style={{marginTop: ""}}>
+                            <Card.Body>
+                                <div className="text-center mb-4 mt-4">
+                                    <h2 className="fw-bold mb-3">Log In to APRODITE</h2>
+                                    <p className="text-muted">Enter your email and password below</p>
+                                </div>
+                                <Form>
+                                    
+                                    <Form.Group className="mb-3 " controlId="formBasicEmail">
+                                        <Form.Label className="fw-bold text-muted">EMAIL </Form.Label>
+                                        <Form.Control type="email" placeholder="Email address" />
+                                    </Form.Group>
 
-                            <Form.Group className="mb-3" controlId="formBasicPassword">
-                                <Form.Label>Password</Form.Label>
-                                <Form.Control type="password" placeholder="Password" />
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                                <Form.Check type="checkbox" label="Check me out" />
-                            </Form.Group>
-                            <Button variant="primary" type="submit">
-                                Submit
-                            </Button>
-                        </Form>
-                    </Card>
-                </Col>
-            </Row>
-        </Container>
-        </div>
-        // <div className="vh-100 colog">
-            
-        //     {/* <div className="container colog">
-        //         <div className="row ">
-        //             <div className="col-md-6">
-        //                 <div className="card p-4 shadow" >
-        //                     <div className="card-body">
-        //                         <div className=" bd-highlight">
-        //                             <h4>Hi, Welcome</h4>
-        //                         </div>
-        //                         <div className="form-group" style={{marginTop:"25px"}}>
-        //                             <label>Email</label>
-        //                             <input type="text" id="basic-addon1"  className="form-control fa-envelope"></input>
-        //                         </div>
-        //                         <div className="form-group" style={{marginTop:"10px"}}>
-        //                             <label>Password</label>
-        //                             <input type={"password"} className="form-control"></input>
-        //                         </div >
+                                    <Form.Group className="mb-3 " controlId="formBasicPassword">
+                                        <Form.Label className="fw-bold text-muted">PASSWORD</Form.Label>
+                                        <Form.Control type="password" placeholder="Password" />
+                                    </Form.Group>
 
-        //                         <Button style={{marginTop:"30px", width:"100%"}}>Sign in</Button>
+                                    <Form.Group className="mb-4 text-end">
+                                        <a href="#!" class="text-body text-decoration-none">Forgot password?</a>
+                                    </Form.Group>
+                                    
+                                    <div className="text-center">
+                                        <Button type="submit" className="btn-login p-2 btn-lg fw-bold mb-4 shadow">
+                                            Log In
+                                        </Button>
+                                        <p>
+                                            Don’t have an account? 
+                                            <a href="#!" className="text-decoration-none">Sign Up</a>
+                                        </p> 
+                                    </div>
 
-        //                         <div style={{marginTop:"20px"}} className="forgot align-items-center ">
-        //                             <p>forgot password?</p>
-        //                         </div>
-        //                     </div>
-        //                 </div>
-        //             </div>
-        //         </div>
-        //     </div> */}
-        // </div>
+                                </Form>
+                                
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+            </Container>
+        </section>
     )
 }
 
