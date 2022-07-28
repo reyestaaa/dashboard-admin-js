@@ -1,16 +1,15 @@
 import React from 'react';
 
-let url = "https://images.glints.com/unsafe/360x0/glints-dashboard.s3.amazonaws.com/company-logo/785498edd8976f2fbd2c1e9eef389c41.png"
+let img = "../image/11logo.png"
 
 function Footer(props) {
     return (
-        <footer className='text-muted text-center mt-5'>
+        <footer className='text-muted text-center mt-5 sticky-bottom'>
             <div className='d-flex justify-content-center align-items-center'>
-                <img src={url} class="img-fluid icons" alt="..." />
-                <p >© 2022 Copyright: PT Immobi Solusi Prima</p>
+                <img src={img} class="icons" alt="..." />
+                <h5>© 2022 Copyright: PT Immobi Solusi Prima</h5>
             </div>
-
-            <p>(021)27094931</p>
+            <p className='ms-5'>(021)27094931</p>
         </footer>
     );
 }

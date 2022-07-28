@@ -2,52 +2,56 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../../Components/Footer';
 import Sidebar from '../../Components/Sidebar';
+import { Button, InputGroup, Container, Form, Col, Row, Card, Table } from "react-bootstrap";
 
 function Add(props) {
     return (
 
-        <div className="container-fluid vh-100">
-            <div className="row">
+        <Container fluid className="vh-100">
+            <Row>
                 <Sidebar />
-                <main className="col-md-9 ms-sm-auto col-lg-9 px-md-4">
+                <main className="col-md-10 ms-sm-auto col-lg-10 px-md-4">
                     <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                         <h2 className="fw-bold">New Members</h2>
                     </div>
 
-                    <div class="row p-3">
-                        <div class="col-md-12">
-                            <form>
-                            <div class="mb-3">
-                                <label class="form-label">Name</label>
-                                <input type="name" class="form-control" placeholder='Your Name' />
-                            </div>
-                            <div class="mb-3">
-                            <label class="form-label">Role</label>
-                                <select class="form-select" aria-label="Default select example">
-                                <option selected>Your Role</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Phone</label>
-                                <input type="number" class="form-control" placeholder='Your Number' />
-                            </div>
+                    <Row className='p-3'>
+                        <Col md={12}>
+                            <Form>
+                                <div className='mb-3'>
+                                    <Form.Label>Name</Form.Label>
+                                    <Form.Control type="text" placeholder="Your Name" />
+                                </div>
+                                <div className='mb-3'>
+                                    <Form.Label>Role</Form.Label>
+                                    <Form.Select aria-label="Your Role">
+                                        <option>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </Form.Select>
+                                </div>
+                                <div className='mb-3'>
+                                    <Form.Label>Phone</Form.Label>
+                                    <Form.Control type="number" placeholder="Your Number Phone" />
+                                </div>
+                                <div className='text-end'>
+                                    <Link className='btn btn-light me-3 shadow-sm' to='/agents'>
+                                        Back
+                                    </Link>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </Form>
+                        </Col>
+                    </Row>
 
-                        <div className='text-end'>
-                        <button type="submit" class="btn btn-light me-3">Back</button>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
-                            </form>
-                        </div>
-                    </div>
 
                     <Footer />
 
                 </main>
-            </div>
-        </div>
+            </Row>
+
+        </Container>
     );
 }
 

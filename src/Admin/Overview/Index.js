@@ -14,10 +14,10 @@ function Index(props) {
 
         <Row>
             <Sidebar />
-                <main className="col-md-9 ms-sm-auto col-lg-9 px-md-4">
+                <main className="col-md-10 ms-sm-auto col-lg-10 px-md-4">
 
                 {/* Card */}
-                <Row className='row p-4 mt-5' style={{ marginBottom: "90px" }}>
+                <Row className='row p-4 mt-5' style={{ marginBottom: "50px" }}>
                     <Col md={4}>
                         <Card className='text-center border-2'>
                             <Card.Body>
@@ -45,7 +45,7 @@ function Index(props) {
                 </Row>
                 
                 {/* SpedoMeter */}
-                <Row className='d-flex mt-5'>
+                <Row className='d-flex p-3 ms-2'>
                     <Col md={4}>
                         <h3 className="text-center fw-bold text-primary mb-3">Complete Tasks</h3>
                         <Spedo />
@@ -61,9 +61,9 @@ function Index(props) {
                 </Row>
                 
                 {/* Table */}
-                <Row className='d-flex '>
+                <Row className='d-flex'>
                     <Col md={12}>
-                        <Card>
+                        <Card  className="p-3">
                             <Card.Body>
                                 <div className="d-flex justify-content-between">
                                     <div>
@@ -80,7 +80,7 @@ function Index(props) {
                                         <i class='bx bx-plus bx-sm'></i>
                                     </Link>
                                 </div>
-                                <Table className='mt-3 '>
+                                <Table className='mt-3 tablevl'>
                                 <thead>
                                     <tr>
                                         <th>Tasks</th>

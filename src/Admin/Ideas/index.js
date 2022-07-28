@@ -1,81 +1,77 @@
 import React from 'react';
+import { Container, Form, Row, Col, Button, Table, Card } from 'react-bootstrap';
 import Footer from '../../Components/Footer';
 import Sidebar from '../../Components/Sidebar';
 
 function index(props) {
     return (
-    <div className="container-fluid">
-        <div className="row">
-            <Sidebar />
+        <Container fluid>
+            <Row>
+                <Sidebar />
+                <main className="col-md-10 ms-sm-auto col-lg-10 px-md-4">
+                    <h1 className="mt-4 border-bottom fw-bold mb-4">Input Your Ideas</h1>
 
-            <main className="col-md-9 ms-sm-auto col-lg-9 px-md-4">
-                <h1 className="mt-4 border-bottom fw-bold mb-4">Input Your Ideas</h1>
+                    <Row>
+                        <Col md={12} className='p-3'>
+                            <Form>
+                                <Form.Group className="mb-3">
+                                    <Form.Control type="text" className='form-control shadow-sm border-3 rounded-pill' placeholder='YOUR NAME' />
+                                </Form.Group>
+                                <Form.Group className="mb-3">
+                                    <Form.Control as="textarea" className="form-control shadow-sm border-3 " placeholder='WHATS YOUR IDEA/SUGGESTION?....' rows={6} />
+                                </Form.Group>
 
-                <div className="col-md-12 col-lg-12">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <form className='p-4'>
-                                <div class="mb-3">
-                                    <input type="name" class="form-control shadow-sm border-3 rounded-pill " placeholder='YOUR NAME' />
-                                </div>
-                                <div class="mb-3">
-                                    <textarea class="form-control shadow-sm border-3 " placeholder='WHATS YOUR IDEA/SUGGESTION?....' id="exampleFormControlTextarea1" rows="6"></textarea>
-                                </div>
-
-
-                                <button type="submit" class="btn btn-secondary fw-bold btn-lg">SEND</button>
-                                </form>
-                            </div>
-                        </div>
-
-                        <div className='row p-3 mt-5 '>
-                        <h2 className='fw-bold'>Table Ideas</h2>
-                        <table class="table mt-3">
-                            <thead>
-                                <tr>
-                                    <th scope='col' >FROM</th>
-                                    <th scope='col' >IDEA / SUGGESTION</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th>Otto</th>
-                                    <td >
-                                        <div class="card border-3">
-                                            <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam sed iure molestias, odit quisquam quaerat?
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th >Thornton</th>
-                                    <td >
-                                        <div class="card border-3">
-                                            <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam sed iure molestias, odit quisquam quaerat?
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th >@twitter</th>
-                                    <td >
-                                        <div class="card border-3">
-                                            <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam sed iure molestias, odit quisquam quaerat?
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        </div>
-                    </div>
+                                <Button type='submit' className='btn btn-secondary fw-bold btn-lg'>SEND</Button>
+                            </Form>
+                        </Col>
+                        <Col md={12} className='p-3 mt-5'>
+                            <h2 className='fw-bold'>Table Ideas</h2>
+                            <Table>
+                                <thead>
+                                    <tr>
+                                        <th scope='col' >FROM</th>
+                                        <th scope='col' >IDEA / SUGGESTION</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Otto</th>
+                                        <td >
+                                            <Card>
+                                                <Card.Body className='border-3'>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam sed iure molestias, odit quisquam quaerat?</p>
+                                                </Card.Body>
+                                            </Card>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Otto</th>
+                                        <td >
+                                            <Card>
+                                                <Card.Body className='border-3'>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam sed iure molestias, odit quisquam quaerat?</p>
+                                                </Card.Body>
+                                            </Card>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Otto</th>
+                                        <td >
+                                            <Card>
+                                                <Card.Body className='border-3'>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam sed iure molestias, odit quisquam quaerat?</p>
+                                                </Card.Body>
+                                            </Card>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                        </Col>
+                    </Row>
                     <Footer />
             </main>
-        </div>
-    </div>
+            </Row>
+        </Container>
     );
 }
 

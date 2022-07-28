@@ -9,7 +9,7 @@ function Progres(props) {
         <div className="container-fluid vh-100">
         <div className="row">
             <Sidebar />
-            <main className="col-md-9 ms-sm-auto col-lg-9 px-md-4">
+            <main className="col-md-10 ms-sm-auto col-lg-10 px-md-4">
                 <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <div>
                         <h4 className="fw-bold">Progres</h4>
@@ -40,7 +40,7 @@ function Progres(props) {
                 </div>
                 
                 <Row>
-                    <Col md={12}>
+                    <Col md={12} className='tablevl'>
                     <Table bordered hover className='text-center'>
                         <thead>
                             <tr>

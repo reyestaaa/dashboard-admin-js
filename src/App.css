@@ -221,9 +221,10 @@ main{
 }
 
 .icons{
-  display: flex;
-  border: 1px black solid;
-  border-radius: 15px;
-  width: 45px;
+  width: 110px;
   object-fit: cover;
+}
+
+.tablevl{
+  overflow-x:auto;
 }

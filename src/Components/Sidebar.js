@@ -1,7 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
-import Footer from './Footer';
 
 function Sidebar() {
     return (
@@ -14,24 +13,24 @@ function Sidebar() {
             </Button>
         </header>
 
-        <nav id="sidebarMenu" className="col-md-3 col-lg-3 d-md-block sidebar collapse ">
+        <nav id="sidebarMenu" className="col-md-2 col-lg-2 d-md-block sidebar collapse ">
                 <div className="position-sticky pt-3">
-                    <h3 className="fw-bold text-center text-light"> <i className='bx bxs-dashboard'></i> APRODITE</h3>
+                    <h4 className="fw-bold text-center text-light"> <i className='bx bxs-dashboard'></i> APRODITE</h4>
                     <ul className="nav flex-column mt-5">
                         <li>
-                            <NavLink activeClassName="" className="nav-link text-white fs-4 " to="/overview">
+                            <NavLink activeClassName="" className="nav-link text-white fs-5 " to="/overview">
                                 <i class=' me-3 bx bxs-pie-chart-alt-2'></i>
                                  Overview
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink exact activeClassName="" className="nav-link text-white fs-4 " to="/ideas">
+                            <NavLink exact activeClassName="" className="nav-link text-white fs-5 " to="/ideas">
                                 <i class="me-3 bi bi-lightbulb-fill"></i> 
                                  Ideas
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink activeClassName="" className="nav-link text-white fs-4" to="/agents"> 
+                            <NavLink activeClassName="" className="nav-link text-white fs-5" to="/agents"> 
                                 <i class='me-3 bx bxs-user'></i>
                                 Agents
                              </NavLink>
