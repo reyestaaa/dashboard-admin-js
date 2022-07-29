@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidebar from '../../Components/Sidebar';
 import { Link } from 'react-router-dom';
-import { Button, InputGroupm, Container, Form, Col, Row, Card, Table, InputGroup } from "react-bootstrap";
+import { Button, InputGroupm, Container, Form, Col, Row, Card, Table, InputGroup, Dropdown } from "react-bootstrap";
 import Footer from '../../Components/Footer';
 
 function Progres(props) {
@@ -60,7 +60,17 @@ function Progres(props) {
                                         Error
                                     </Button>
                                 </td>
-                                <td><i class='bx bx-dots-vertical-rounded'></i></td>
+                                <td>
+                                    <div className="dropdown ">
+                                        <a className="fw-bold fs-4 text-dark text-decoration-none" href="#"  role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class='bx bx-dots-vertical-rounded'></i>
+                                        </a>
+                                        <ul className="dropdown-menu border-0" aria-labelledby="dropdownMenuLink">
+                                            <li><a className="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Edit</a></li>
+                                            <li><a className="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td>UI/UX Design</td>
@@ -71,7 +81,17 @@ function Progres(props) {
                                         Ongoing
                                     </Button>
                                 </td>
-                                <td><i class='bx bx-dots-vertical-rounded'></i></td>
+                                <td>
+                                    <div className="dropdown ">
+                                        <a className="fw-bold fs-4 text-dark text-decoration-none" href="#"  role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class='bx bx-dots-vertical-rounded'></i>
+                                        </a>
+                                        <ul className="dropdown-menu border-0" aria-labelledby="dropdownMenuLink">
+                                            <li><a className="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Edit</a></li>
+                                            <li><a className="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td>UI/UX Design</td>
@@ -82,7 +102,17 @@ function Progres(props) {
                                         Paused
                                     </Button>
                                 </td>
-                                <td><i class='bx bx-dots-vertical-rounded'></i></td>
+                                <td>
+                                    <div className="dropdown ">
+                                        <a className="fw-bold fs-4 text-dark text-decoration-none" href="#"  role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class='bx bx-dots-vertical-rounded'></i>
+                                        </a>
+                                        <ul className="dropdown-menu border-0" aria-labelledby="dropdownMenuLink">
+                                            <li><a className="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Edit</a></li>
+                                            <li><a className="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td>UI/UX Design</td>
@@ -93,7 +123,17 @@ function Progres(props) {
                                         Done
                                     </Button>
                                 </td>
-                                <td><i class='bx bx-dots-vertical-rounded'></i></td>
+                                <td>
+                                    <div className="dropdown ">
+                                        <a className="fw-bold fs-4 text-dark text-decoration-none" href="#"  role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class='bx bx-dots-vertical-rounded'></i>
+                                        </a>
+                                        <ul className="dropdown-menu border-0" aria-labelledby="dropdownMenuLink">
+                                            <li><a className="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Edit</a></li>
+                                            <li><a className="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
                             </tr>
                         </tbody>
                     </Table>

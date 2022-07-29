@@ -45,7 +45,7 @@ function Index(props) {
                 </Row>
                 
                 {/* SpedoMeter */}
-                <Row className='d-flex p-3 ms-2'>
+                <Row className='p-4'>
                     <Col md={4}>
                         <h3 className="text-center fw-bold text-primary mb-3">Complete Tasks</h3>
                         <Spedo />
@@ -71,7 +71,7 @@ function Index(props) {
                                         <h5 class="card-subtitle mb-2 text-muted">Today</h5>
                                     </div>
                                     <div>
-                                        <Link className="text-decoration-none fs-6 fw-bold" to='/overview/progres'>VIEW PROGRES</Link>
+                                        <Link className="text-decoration-none fs-6 fw-bold" to='/overview/progres'>VIEW PROGRES DETAIL</Link>
                                     </div>
                                 </div>
                                 <div className="d-flex justify-content-between align-items-center mt-3 mb-4">
@@ -84,7 +84,8 @@ function Index(props) {
                                 <thead>
                                     <tr>
                                         <th>Tasks</th>
-                                        <th className="text-end">Priority</th>
+                                        <th>Status</th>
+                                        <th>Priority</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -95,7 +96,10 @@ function Index(props) {
                                                 APP Design
                                             </label>
                                         </td>
-                                        <td className="text-end">
+                                        <td>
+                                            <Button variant='outline-warning' className='text-uppercase fw-bold rounded-pill  '>PAUSED</Button>
+                                        </td>
+                                        <td>
                                             <Button variant='warning' className='text-uppercase fw-bold rounded-pill text-white '>URGENT</Button>
                                         </td>
                                     </tr>
@@ -107,7 +111,11 @@ function Index(props) {
                                             </label>
                                         </td>
 
-                                        <td className="text-end">
+                                        <td>
+                                            <Button variant='outline-danger' className='text-uppercase fw-bold rounded-pill  '>ERROR</Button>
+                                        </td>
+
+                                        <td>
                                             <Button variant='danger' className='text-uppercase fw-bold rounded-pill text-white '>CRITICAL</Button>
                                         </td>
                                     </tr>
@@ -119,8 +127,12 @@ function Index(props) {
                                             </label>
                                         </td>
 
-                                        <td className="text-end">
-                                        <Button variant='success' className='text-uppercase fw-bold rounded-pill text-white '>NORMAL</Button>
+                                        <td>
+                                            <Button variant='outline-success' className='text-uppercase fw-bold rounded-pill  '>DONE</Button>
+                                        </td>
+
+                                        <td>
+                                            <Button variant='success' className='text-uppercase fw-bold rounded-pill text-white '>NORMAL</Button>
                                         </td>
                                     </tr>
                                 </tbody>

@@ -15,7 +15,7 @@ function Sidebar() {
 
         <nav id="sidebarMenu" className="col-md-2 col-lg-2 d-md-block sidebar collapse ">
                 <div className="position-sticky pt-3">
-                    <h4 className="fw-bold text-center text-light"> <i className='bx bxs-dashboard'></i> APRODITE</h4>
+                    <h4 className="fw-bold text-center text-light">  APRODITE</h4>
                     <ul className="nav flex-column mt-5">
                         <li>
                             <NavLink activeClassName="" className="nav-link text-white fs-5 " to="/overview">

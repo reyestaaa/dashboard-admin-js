@@ -40,7 +40,11 @@ function Index(props) {
                                         </th>
                                         <td>UI/UX</td>
                                         <td>018201280</td>
-                                        <td><button type="button" class="btn btn-outline-primary">Edit</button></td>
+                                        <td>
+                                        <Link className='btn btn-outline-primary' to='/agents/edit'>
+                                            Edit
+                                        </Link>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th className='d-flex'>
@@ -49,7 +53,11 @@ function Index(props) {
                                         </th>
                                         <td>FRONT END</td>
                                         <td>1092019</td>
-                                        <td ><button type="button" class="btn btn-outline-primary">Edit</button></td>
+                                        <td >
+                                        <Link className='btn btn-outline-primary' to='/agents/edit'>
+                                            Edit
+                                        </Link>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th className='d-flex'>
@@ -57,7 +65,11 @@ function Index(props) {
                                             <p>JONAS AMSO</p>
                                         </th>
                                         <td colspan="2">BACKEND</td>
-                                        <td><button type="button" class="btn btn-outline-primary">Edit</button></td>
+                                        <td>
+                                        <Link className='btn btn-outline-primary' to='/agents/edit'>
+                                            Edit
+                                        </Link>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </Table>

@@ -1,8 +1,11 @@
 import React from 'react';
+import { Card } from 'react-bootstrap';
 import ReactSpeedometer from "react-d3-speedometer"
 
 function Spedometer(props) {
-    return <ReactSpeedometer
+    return (
+      <div>
+        <ReactSpeedometer
         width={300}
         needleHeightRatio={0.8}
         value={780}
@@ -30,7 +33,9 @@ function Spedometer(props) {
         needleTransition="easeElastic"
         needleColor={'#0071FF'}
         textColor={'#000000'}
-    />
+      />
+      </div>
+    )
     // <Pie
     //     data={{
     //         labels: ['CRITICAL', 'URGENT', 'SUCCESS'],

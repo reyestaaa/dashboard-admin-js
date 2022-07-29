@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
-
+html{
+  height: 100%;
+}
 *{
   margin: 0;
   padding: 0;
@@ -15,6 +17,7 @@
 body {
     font-size: .875rem;
     background-color: #F3F4F6 ;
+    min-height: 100%;
   }
 
 main{
@@ -221,10 +224,19 @@ main{
 }
 
 .icons{
-  width: 110px;
+  width: 170px;
   object-fit: cover;
 }
 
+
 .tablevl{
   overflow-x:auto;
+}
+
+footer{
+  margin-top: auto;
+}
+
+.logo{
+  width: 250px;
 }

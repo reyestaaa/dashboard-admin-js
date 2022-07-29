@@ -6,10 +6,13 @@ import Overview from "./Admin/Overview/Index"
 import OverAdd from "./Admin/Overview/Add"
 import OverProgres from "./Admin/Overview/Progres"
 import Ideas from "./Admin/Ideas/index"
-import Login from "./Admin/Login";
+import Login from "./Auth/Login";
 import Agents from "./Admin/Agents/Index"
 import AgentAdd from "./Admin/Agents/Add"
+import AgentEdit from "./Admin/Agents/Edit"
 import Speed from "./Components/SpedoMeter";
+import Register from "./Auth/Register";
+import ForgotPass from "./Auth/ForgotPass"
 
 
 
@@ -28,8 +31,11 @@ function App() {
         <Route path="/ideas" element={<Ideas />} />
         <Route path="/agents" element={<Agents />} />
         <Route path="/agents/add" element={<AgentAdd />} />
+        <Route path="/agents/edit" element={<AgentEdit />} />
 
         <Route path="/login" element={<Login/>} />
+        <Route path="/register" element={<Register/>} />
+        <Route path="/forgot-password" element={<ForgotPass/>} />
       </Routes>
     </Router>
   );
