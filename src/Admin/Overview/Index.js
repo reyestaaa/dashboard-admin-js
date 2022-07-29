@@ -80,7 +80,7 @@ function Index(props) {
                                         <i class='bx bx-plus bx-sm'></i>
                                     </Link>
                                 </div>
-                                <Table className='mt-3 tablevl'>
+                                <Table className='mt-3' responsive>
                                 <thead>
                                     <tr>
                                         <th>Tasks</th>
