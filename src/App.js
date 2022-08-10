@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Dashboard from "./Admin/Dashboard"
+import Dashboard from "./pages/dashboard/dashboard";
 import Overview from "./Admin/Overview/Index"
 import OverAdd from "./Admin/Overview/Add"
 import OverProgres from "./Admin/Overview/Progres"
