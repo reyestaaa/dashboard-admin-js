@@ -74,7 +74,7 @@ class taskDistribution extends Component {
     const end = new Date(`${START_YEAR + NUM_OF_YEARS}`)
     return (
       <div className="app p-4 border-top border-dark">
-        <h1 className="title">React Timelines</h1>
+        <h1 className="title">Task Distribution</h1>
         <Timeline
           scale={{
             start,

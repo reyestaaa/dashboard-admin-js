@@ -249,3 +249,12 @@ footer{
 .bg-user{
   background-color: darkorchid;
 }
+
+.bold-blue {
+	font-weight: bold;
+	color: #0277BD;
+}
+
+.table{
+  overflow-x:scroll;
+}

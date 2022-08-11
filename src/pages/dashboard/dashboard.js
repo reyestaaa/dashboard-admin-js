@@ -1,54 +1,13 @@
 import React from 'react'
-import { Container, Row, Col, Card, ListGroup } from 'react-bootstrap'
+import { Container, Row, Col, Card, ListGroup, Table, Button, Dropdown, SplitButton, InputGroup, Form, DropdownButton } from 'react-bootstrap'
 // import "./style.css"
 
 import 'react-timelines/lib/css/style.css'
+import Footer from '../../Components/Footer'
 
 import Task from "../dashboard/component/taskDistribution"
 
 import Speedometer  from "./component/speedometer"
-
-// import Timeline from 'react-calendar-timeline'
-// import 'react-calendar-timeline/lib/Timeline.css'
-// import moment from 'moment'
-
-// const groups = [{ id: 1, title: 'group 1' }, { id: 2, title: 'group 2' }, { id: 3, title: 'group 3' }, { id: 4, title: 'group 4' }]
-
-// const items = [
-//   {
-//     id: 1,
-//     group: 1,
-//     title: 'USER FLOW',
-//     start_time: moment(),
-//     end_time: moment().add(1, 'hour')
-//   },
-//   {
-//     id: 2,
-//     group: 2,
-//     title: 'UI/UX FIX',
-//     start_time: moment().add(-0.5, 'hour'),
-//     end_time: moment().add(0.5, 'hour')
-//   },
-//   {
-//     id: 3,
-//     group: 1,
-//     title: 'BACKEND ',
-//     start_time: moment().add(6, 'hour'),
-//     end_time: moment().add(3, 'hour')
-//   },
-//   {
-//     id: 4,
-//     group: 3,
-//     title: 'ANKJER AA 3',
-//   },
-//   {
-//     id: 5,
-//     group: 4,
-//     title: 'REPORT',
-//     start_time: moment().add(2, 'hour'),
-//     end_time: moment().add(3, 'hour')
-//   }
-// ]
 
 let maps = 'https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FJakarta&showTitle=0&showTz=0&showCalendars=1&showTabs=1&showPrint=0'
 let img = "../../image/Ellipse.png"
@@ -125,7 +84,131 @@ export default function dashboard() {
                 </div>
 
             </Col>
+
+            <Col md={12} className=" border-top border-dark mt-2">
+
+                <div className='p-2 text-light bg-secondary d-flex align-items-center'>
+                    <i class='bx bx-cloud-download bx-md'></i>
+                    <h3 className='fw-bold ms-3'>Assigned Task</h3>
+                </div>
+
+                <div className='d-flex justify-content-between mt-3 p-3'>
+
+                    <div className='d-flex align-items-center'>
+                        <InputGroup className="w-50">
+                            <Form.Control aria-label="Text input with dropdown button" />
+
+                            <DropdownButton
+                            variant="outline-secondary"
+                            title=""
+                            id="input-group-dropdown-2"
+                            align="end"
+                            >
+                            <Dropdown.Item href="#">Action</Dropdown.Item>
+                            <Dropdown.Item href="#">Another action</Dropdown.Item>
+                            <Dropdown.Item href="#">Something else here</Dropdown.Item>
+                            <Dropdown.Divider />
+                            <Dropdown.Item href="#">Separated link</Dropdown.Item>
+                            </DropdownButton>
+                        </InputGroup>
+                        <p className='ms-4 mt-3 fw-bold'>Record Per Page</p>
+                    </div>
+
+                    <div className='d-flex align-items-center'>
+                        <p className='mt-3 fw-bold'>Search:</p>
+                        <input type="search" class="form-control ms-3" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                    </div>
+                </div>
+                <div className='tablevl'>
+                <Table bordered hover >
+                    <thead>
+                        <tr>
+                            <th>Tasks</th>
+                            <th>Next Action</th>
+                            <th>Assigned To</th>
+                            <th>Crated By</th>
+                            <th>Update By</th>
+                            <th>Last Updated</th>
+                            <th>Status</th>
+                            <th>Priorty</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Accounts Documnets</td>
+                            <td>Close</td>
+                            <td>Admin</td>
+                            <td>Admin</td>
+                            <td>Admin</td>
+                            <td>27/08/2022</td>
+                            <td>Pending</td>
+                            <td>Low</td>
+                            
+                            <td>
+                                <Button className='me-3' variant='danger'>
+                                    Doness
+                                </Button>
+                                <Button className='me-3' variant='primary'>
+                                    Done
+                                </Button>
+                                <Button variant='success'>
+                                    Dones
+                                </Button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Accounts Documnets</td>
+                            <td>Close</td>
+                            <td>Admin</td>
+                            <td>Admin</td>
+                            <td>Admin</td>
+                            <td>27/08/2022</td>
+                            <td>Pending</td>
+                            <td>Low</td>
+                            
+                            <td>
+                                <Button className='me-3' variant='danger'>
+                                    Doness
+                                </Button>
+                                <Button className='me-3' variant='primary'>
+                                    Done
+                                </Button>
+                                <Button variant='success'>
+                                    Dones
+                                </Button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Accounts Documnets</td>
+                            <td>Close</td>
+                            <td>Admin</td>
+                            <td>Admin</td>
+                            <td>Admin</td>
+                            <td>27/08/2022</td>
+                            <td>Pending</td>
+                            <td>Low</td>
+                            
+                            <td>
+                                <Button className='me-3' variant='danger'>
+                                    Doness
+                                </Button>
+                                <Button className='me-3' variant='primary'>
+                                    Done
+                                </Button>
+                                <Button variant='success'>
+                                    Dones
+                                </Button>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </Table>
+                </div>
+                
+            </Col>
         </Row>
+        <Footer />
     </Container>
   )
 }
