@@ -10,7 +10,7 @@ import { buildTimebar, buildTrack } from './builders'
 
 import { fill } from './utils'
 
-const now = new Date()
+const now = new Date('2021-01-01')
 
 const timebar = buildTimebar()
 
@@ -20,7 +20,7 @@ const clickElement = element => alert(`Clicked element\n${JSON.stringify(element
 const MIN_ZOOM = 2
 const MAX_ZOOM = 20
 
-class taskDistribution extends Component {
+class App extends Component {
   constructor(props) {
     super(props)
 
@@ -73,7 +73,7 @@ class taskDistribution extends Component {
     const start = new Date(`${START_YEAR}`)
     const end = new Date(`${START_YEAR + NUM_OF_YEARS}`)
     return (
-      <div className="app p-4 border-top border-dark">
+      <div className="app">
         <h1 className="title">React Timelines</h1>
         <Timeline
           scale={{
@@ -85,6 +85,8 @@ class taskDistribution extends Component {
           }}
           isOpen={open}
           toggleOpen={this.handleToggleOpen}
+          zoomIn={this.handleZoomIn}
+          zoomOut={this.handleZoomOut}
           clickElement={clickElement}
           clickTrackButton={track => {
             // eslint-disable-next-line no-alert
@@ -102,4 +104,4 @@ class taskDistribution extends Component {
   }
 }
 
-export default taskDistribution
+export default App

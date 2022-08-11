@@ -4,6 +4,8 @@ import { Container, Row, Col, Card, ListGroup } from 'react-bootstrap'
 
 import 'react-timelines/lib/css/style.css'
 
+import Task from "../dashboard/component/taskDistribution"
+
 import Speedometer  from "./component/speedometer"
 
 // import Timeline from 'react-calendar-timeline'
@@ -57,7 +59,6 @@ export default function dashboard() {
         <Row>
             <Col md={9} className="border-end border-1 border-dark">
                 <Row className='mt-5'>
-
                     {/* Spedometer */}
                     <Col md={4}>
                         <Speedometer title="Completed Task"></Speedometer>
@@ -71,13 +72,7 @@ export default function dashboard() {
 
                     {/* Task Distribution */}
                     {/* <Timeline /> */}
-                    <h2>Task Distribution</h2>
-                    {/* <Timeline
-                        groups={groups}
-                        items={items}
-                        defaultTimeStart={moment().add(-12, 'hour')}
-                        defaultTimeEnd={moment().add(12, 'hour')}
-                    /> */}
+                    <Task />
 
                 </Row>
             </Col>
