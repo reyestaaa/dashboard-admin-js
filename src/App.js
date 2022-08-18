@@ -1,5 +1,7 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+
+import DashboardPage from "../src/pages/dashboard/dashboard"
 
 import Dashboard from "./pages/dashboard/dashboard";
 import Overview from "./Admin/Overview/Index"
@@ -20,7 +22,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<Dashboard />} />
+        <Route exact path="/" element={<Navigate to="dashboard"></Navigate>} />
+        <Route exact path="/dashboard" element={<DashboardPage></DashboardPage>}></Route>
+        {/* <Route exact path="/" element={<Dashboard />} />
 
         <Route path="/Speed" element={<Speed />} />   
 
@@ -35,7 +39,7 @@ function App() {
 
         <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register/>} />
-        <Route path="/forgot-password" element={<ForgotPass/>} />
+        <Route path="/forgot-password" element={<ForgotPass/>} /> */}
       </Routes>
     </Router>
   );
