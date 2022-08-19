@@ -50,20 +50,12 @@ export const addMonthsToYearAsDate = (year, monthsToAdd) => {
 
 // Credit: https://jsfiddle.net/katowulf/3gtDf/
 const ADJECTIVES = [
-  'adamant',
-  'adroit',
-  'amatory',
-  'animistic',
-  'antic',
-  'arcadian',
+  'APP DESAIN',
+  'WEB DESAIN',
+  'DASHBOARD DESAIN',
 ]
 const NOUNS = [
-  'ninja',
-  'chair',
-  'pancake',
-  'statue',
-  'unicorn',
-  'rainbows',
+  '',
 ]
 
 export const randomTitle = () =>

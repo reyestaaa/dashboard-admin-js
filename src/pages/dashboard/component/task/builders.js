@@ -11,36 +11,27 @@ import {
   MAX_MONTH_SPAN,
   MIN_MONTH_SPAN,
   MAX_NUM_OF_SUBTRACKS,
+  TIME_PER_HOUR,
+  TIME_PER_DAY,
+  TIME_NAME
 } from './constants'
 
 import { fill, hexToRgb, colourIsLight, addMonthsToYear, addMonthsToYearAsDate, nextColor, randomTitle } from './utils'
 
 export const buildQuarterCells = () => {
   const v = []
-  for (let i = 0; i < QUARTERS_PER_YEAR * NUM_OF_YEARS; i += 1) {
-    const quarter = (i % 4) + 1
-    const startMonth = i * MONTHS_PER_QUARTER
-    const s = addMonthsToYear(START_YEAR, startMonth)
-    const e = addMonthsToYear(START_YEAR, startMonth + MONTHS_PER_QUARTER)
-    v.push({
-      id: `${s.year}-q${quarter}`,
-      title: `Q${quarter} ${s.year}`,
-      start: new Date(`${s.year}-${s.month}-01`),
-      end: new Date(`${e.year}-${e.month}-01`),
-    })
-  }
+
   return v
 }
-
 export const buildMonthCells = () => {
   const v = []
-  for (let i = 0; i < MONTHS_PER_YEAR * NUM_OF_YEARS; i += 1) {
+  for (let i = 0; i < TIME_PER_DAY * NUM_OF_YEARS; i += 1) {
     const startMonth = i
     const start = addMonthsToYearAsDate(START_YEAR, startMonth)
     const end = addMonthsToYearAsDate(START_YEAR, startMonth + 1)
     v.push({
       id: `m${startMonth}`,
-      title: MONTH_NAMES[i % 12],
+      title: TIME_NAME[i % 22],
       start,
       end,
     })
@@ -50,14 +41,14 @@ export const buildMonthCells = () => {
 
 export const buildTimebar = () => [
   {
-    id: 'quarters',
-    title: 'Quarters',
+    id: '',
+    title: '',
     cells: buildQuarterCells(),
     style: {},
   },
   {
-    id: 'months',
-    title: 'Months',
+    id: 'time',
+    title: 'TIME',
     cells: buildMonthCells(),
     useAsGrid: true,
     style: {},
@@ -117,19 +108,15 @@ export const buildElements = trackId => {
 
 export const buildSubtrack = (trackId, subtrackId) => ({
   id: `track-${trackId}-${subtrackId}`,
-  title: `Subtrack ${subtrackId}`,
-  elements: buildElements(subtrackId),
+  // title: `Subtrack ${subtrackId}`,
+  // elements: buildElements(subtrackId),
 })
 
 export const buildTrack = trackId => {
   const tracks = fill(Math.floor(Math.random() * MAX_NUM_OF_SUBTRACKS) + 1).map(i => buildSubtrack(trackId, i + 1))
   return {
     id: `track-${trackId}`,
-    title: `Track ${trackId}`,
+    title: `NAMA ${trackId}`,
     elements: buildElements(trackId),
-    tracks,
-    // hasButton: true,
-    // link: 'www.google.com',
-    isOpen: false,
   }
 }

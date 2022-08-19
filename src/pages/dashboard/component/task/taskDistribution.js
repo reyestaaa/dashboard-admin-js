@@ -1,14 +1,12 @@
 /* eslint-disable import/no-unresolved */
 import React, { Component } from 'react'
 import Timeline from 'react-timelines'
-
+import { Form } from 'react-bootstrap'
 import 'react-timelines/lib/css/style.css'
-
 import { START_YEAR, NUM_OF_YEARS, NUM_OF_TRACKS } from './constants'
-
 import { buildTimebar, buildTrack } from './builders'
-
 import { fill } from './utils'
+import './taskDistribution.css'
 
 const now = new Date()
 
@@ -18,7 +16,7 @@ const timebar = buildTimebar()
 const clickElement = element => alert(`Clicked element\n${JSON.stringify(element, null, 2)}`)
 
 const MIN_ZOOM = 2
-const MAX_ZOOM = 20
+const MAX_ZOOM = 1
 
 class taskDistribution extends Component {
   constructor(props) {
@@ -39,42 +37,22 @@ class taskDistribution extends Component {
     }
   }
 
-  handleToggleOpen = () => {
-    this.setState(({ open }) => ({ open: !open }))
-  }
-
-  handleZoomIn = () => {
-    this.setState(({ zoom }) => ({ zoom: Math.min(zoom + 1, MAX_ZOOM) }))
-  }
-
-  handleZoomOut = () => {
-    this.setState(({ zoom }) => ({ zoom: Math.max(zoom - 1, MIN_ZOOM) }))
-  }
-
-  handleToggleTrackOpen = track => {
-    this.setState(state => {
-      const tracksById = {
-        ...state.tracksById,
-        [track.id]: {
-          ...track,
-          isOpen: !track.isOpen,
-        },
-      }
-
-      return {
-        tracksById,
-        tracks: Object.values(tracksById),
-      }
-    })
-  }
-
   render() {
     const { open, zoom, tracks } = this.state
     const start = new Date(`${START_YEAR}`)
     const end = new Date(`${START_YEAR + NUM_OF_YEARS}`)
     return (
       <div className="app p-4 border-top border-dark">
-        <h1 className="title">Task Distribution</h1>
+        <div className='d-flex justify-content-between align-items-center border-bottom'>
+          <h1 className="title text-start">Task Distribution</h1>
+          <Form.Select aria-label="Default select example" className='filter shadow-sm b' id='add'>
+                <option>JANUARY </option>
+                <option value="1">FEBRUARY</option>
+                <option value="2">MARET</option>
+                <option value="3">APRIL</option>
+          </Form.Select>
+        </div>
+        <h3 className='text-center mt-3'>JANUARY</h3>
         <Timeline
           scale={{
             start,
