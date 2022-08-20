@@ -31,7 +31,7 @@ export const buildMonthCells = () => {
     const end = addMonthsToYearAsDate(START_YEAR, startMonth + 1)
     v.push({
       id: `m${startMonth}`,
-      title: TIME_NAME[i % 22],
+      title: TIME_NAME[i % 24],
       start,
       end,
     })
