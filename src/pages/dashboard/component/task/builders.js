@@ -116,7 +116,7 @@ export const buildTrack = trackId => {
   const tracks = fill(Math.floor(Math.random() * MAX_NUM_OF_SUBTRACKS) + 1).map(i => buildSubtrack(trackId, i + 1))
   return {
     id: `track-${trackId}`,
-    title: `NAMA ${trackId}`,
+    title: `NAME ${trackId}`,
     elements: buildElements(trackId),
   }
 }
