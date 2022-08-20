@@ -48,11 +48,19 @@ class taskDistribution extends Component {
           <Form.Select aria-label="Default select example" className='filter shadow-sm b' id='add'>
                 <option>JANUARY </option>
                 <option value="1">FEBRUARY</option>
-                <option value="2">MARET</option>
+                <option value="2">MARCH</option>
                 <option value="3">APRIL</option>
+                <option value="4">MAY</option>
+                <option value="5">JUNE</option>
+                <option value="6">JULY</option>
+                <option value="7">AUGUST</option>
+                <option value="8">SEPTEMBER</option>
+                <option value="9">OCTOBER</option>
+                <option value="10">NOVEMBER</option>
+                <option value="11">DESEMBER</option>
           </Form.Select>
         </div>
-        <h3 className='text-center mt-3'>JANUARY</h3>
+        <h3 className='text-center mt-4 fw-bold'>JANUARY</h3>
         <Timeline
           scale={{
             start,
